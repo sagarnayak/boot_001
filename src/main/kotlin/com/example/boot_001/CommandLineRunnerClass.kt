@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration
 class CommandLineRunnerClass : CommandLineRunner {
 
     override fun run(vararg args: String?) {
-        log.info("Going to insert data to User table.")
+        log.info("Inside the command line runner.")
     }
 }
