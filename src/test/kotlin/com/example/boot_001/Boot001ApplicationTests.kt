@@ -1,4 +1,4 @@
-package com.sagar.spring.boot_001
+package com.example.boot_001
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
