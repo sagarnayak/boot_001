@@ -20,3 +20,21 @@ class Welcome {
         )
     }
 }
+
+/*
+filter out statically
+@JsonIgnore // use this to ignore the data variable always
+filter out variables dynamically
+    @GetMapping
+    fun getUsers(): MappingJacksonValue {
+        val students = studentRepository.findAll()
+        val mappingJacksonValueClass = MappingJacksonValue(students)
+        val filter = SimpleFilterProvider().addFilter(
+                "someFilter",
+                SimpleBeanPropertyFilter.filterOutAllExcept("first_name", "last_name")
+        )
+        mappingJacksonValueClass.filters = filter
+        print(students.toString())
+        return mappingJacksonValueClass
+    }
+ */
