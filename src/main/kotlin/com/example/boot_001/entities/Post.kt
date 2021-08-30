@@ -24,3 +24,33 @@ joinColumn = @joinColumn ( name = "student_id" ),
 inverseJoinColumn = @joinColumn ( name = course_id" )
 )
  */
+
+/*
+Inheritance in entities
+
+@Entity
+abstract class Employee () {}
+
+@Entity
+class FullTimeEmployee extends Employee () {}
+
+@Entity
+class PartTimeEmployee extends Employee () {}
+
+WAY 1
+===============================
+SINGLE TABLE
+to save all data in a single table
+@Inheritance ( strategy = InheritanceType.SINGLE_TABLE )
+@DiscriminatorColumn ( name = "EmployeeType" )
+this is the default one
+===============================
+WAY 2
+===============================
+TABLE PER CLASS
+to save data in separate class
+@Inheritance ( strategy = InheritanceType.SINGLE_TABLE )
+@DiscriminatorColumn ( name = "EmployeeType" )
+this is the default one
+===============================
+ */
