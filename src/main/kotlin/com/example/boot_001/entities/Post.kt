@@ -45,12 +45,40 @@ to save all data in a single table
 @DiscriminatorColumn ( name = "EmployeeType" )
 this is the default one
 ===============================
+
 WAY 2
 ===============================
 TABLE PER CLASS
 to save data in separate class
-@Inheritance ( strategy = InheritanceType.SINGLE_TABLE )
+@Inheritance ( strategy = InheritanceType.TABLE_PER_CLASS )
 @DiscriminatorColumn ( name = "EmployeeType" )
-this is the default one
+Each concrete sub-class are stored in its separate table.
+Common columns are saved for each employee
+===============================
+
+WAY 3
+===============================
+JOINED
+Common columns are saved in parent table.
+sub-class have their own table with own columns.
+@Inheritance ( strategy = InheritanceType.JOINED )
+===============================
+
+WAY 4
+===============================
+USING MAPPED SUPER CLASS
+The super class is only there for mapping. It is not an entity
+
+@MappedSuperClass
+abstract class Employee () {}
+
+There is no table for parent class.
+All data are stored in separate table for child entities.
+===============================
+
+WHAT TO USE AND WHEN
+===============================
+Data integrity and data quality is best in joined.
+Single table is best for performance.
 ===============================
  */
