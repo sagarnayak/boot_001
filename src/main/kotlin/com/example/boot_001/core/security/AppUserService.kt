@@ -23,7 +23,7 @@ class AppUserService : UserDetailsService {
                         true,
                         true,
                         true,
-                        true
+                        true,
                 )
             }
             "admin1" -> {
@@ -34,7 +34,7 @@ class AppUserService : UserDetailsService {
                         true,
                         true,
                         true,
-                        true
+                        true,
                 )
             }
             "adminTrainee1" -> {
@@ -45,7 +45,7 @@ class AppUserService : UserDetailsService {
                         true,
                         true,
                         true,
-                        true
+                        true,
                 )
             }
             else -> {
